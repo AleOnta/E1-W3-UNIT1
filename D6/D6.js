@@ -117,6 +117,27 @@ const epify = function (word) {
 const sentence = epify("EPICODE è il meglio");
 console.log(`The last version of the sentence is: ${sentence}`);
 
+// ALTERNATIVE OPTION WITHOUT USING TRY & CATCH
+
+/*
+const epify = function (word) {
+  if (typeof word === "string") {
+    let input = word.trimStart();
+    input = word.substr(0, 7);
+    if (input === "EPICODE") {
+      const sentence = word.trimStart();
+      return sentence;
+    } else {
+      const sentence = "EPICODE" + " " + input;
+      return sentence;
+    }
+  } else {
+    console.log("The given value isn't a string, please insert a correct value");
+    stop;
+  }
+};
+*/
+
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
@@ -182,19 +203,7 @@ console.log(updatedString);
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
-/*
-const cutString = function (sentence) {
-  let oldSentence = sentence;
-  oldSentence = sentence.slice(0);
-  last_letter = oldSentence.length();
-  console.log(last_letter);
-  const newSentence = oldSentence.slice(last_letter);
-  return newSentence;
-};
 
-const newSentence = cutString("idoes this function work?a");
-console.log(newSentence);
-*/
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
