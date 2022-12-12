@@ -50,6 +50,22 @@ console.log(`This is the result of your crazySum: ${sum}`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("-------- Exercise 3 --------");
+
+const crazyDiff = function (n1) {
+  let diff = 0;
+  switch (n1) {
+    case n1 > 19:
+      diff = Math.abs((n1 - 19) * 3);
+      return diff;
+    default:
+      diff = Math.abs(n1 - 19);
+      return diff;
+  }
+};
+
+const diff = crazyDiff(1);
+console.log(`This is the result of your crazyDiff: ${diff}`);
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
