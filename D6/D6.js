@@ -99,14 +99,18 @@ console.log(bound);
 console.log("-------- Exercise 5 --------");
 
 const epify = function (word) {
-  let input = word.trimStart();
-  input = word.substr(0, 7);
-  if (input === "EPICODE") {
-    const sentence = word;
-    return sentence;
-  } else {
-    const sentence = "EPICODE" + " " + word;
-    return sentence;
+  try {
+    let input = word.trimStart();
+    input = word.substr(0, 7);
+    if (input === "EPICODE") {
+      const sentence = word.trimStart();
+      return sentence;
+    } else {
+      const sentence = "EPICODE" + " " + input;
+      return sentence;
+    }
+  } catch (TypeError) {
+    console.log("The given value isn't a string, please insert a correct value");
   }
 };
 
@@ -119,12 +123,38 @@ console.log(`The last version of the sentence is: ${sentence}`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("-------- Exercise 6 --------");
+
+const check3and7 = function (n) {
+  if (n % 3 === 0 || n % 7 === 0) {
+    const result = true;
+    return result;
+  } else {
+    const result = false;
+    return result;
+  }
+};
+
+const result = check3and7(10);
+console.log(`Is the number a multiple of 3 or 7?: ${result}`);
+console.log(result);
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("-------- Exercise 7 --------");
+
+const reverseString = function (reversal) {
+  let wordArray = reversal.split("");
+  let reversalWordArray = wordArray.reverse();
+  let reversal_phrase = reversalWordArray.join("");
+  return reversal_phrase;
+};
+
+const reversal_phrase = reverseString("My name is Alessandro");
+console.log(reversal_phrase);
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
