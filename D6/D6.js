@@ -162,12 +162,39 @@ console.log(reversal_phrase);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("-------- Exercise 8 --------");
+
+const upperFirst = function (sentence) {
+  const wordArray = sentence.split(" ");
+
+  for (let i = 0; i < wordArray.length; i++) {
+    wordArray[i] = wordArray[i].charAt(0).toUpperCase() + wordArray[i].slice(1);
+  }
+
+  const updatedString = wordArray.join(" ");
+  return updatedString;
+};
+
+const updatedString = upperFirst("my name is alessandro");
+console.log(updatedString);
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+/*
+const cutString = function (sentence) {
+  let oldSentence = sentence;
+  oldSentence = sentence.slice(0);
+  last_letter = oldSentence.length();
+  console.log(last_letter);
+  const newSentence = oldSentence.slice(last_letter);
+  return newSentence;
+};
 
+const newSentence = cutString("idoes this function work?a");
+console.log(newSentence);
+*/
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
