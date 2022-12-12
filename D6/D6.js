@@ -86,8 +86,8 @@ const boundary = function (n) {
 };
 
 const bound = boundary(59);
-console.log(bound);
 console.log(`The boundary you're asking for is: ${bound}`);
+console.log(bound);
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -96,6 +96,22 @@ console.log(`The boundary you're asking for is: ${bound}`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("-------- Exercise 5 --------");
+
+const epify = function (word) {
+  let input = word.trimStart();
+  input = word.substr(0, 7);
+  if (input === "EPICODE") {
+    const sentence = word;
+    return sentence;
+  } else {
+    const sentence = "EPICODE" + " " + word;
+    return sentence;
+  }
+};
+
+const sentence = epify("EPICODE è il meglio");
+console.log(`The last version of the sentence is: ${sentence}`);
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
