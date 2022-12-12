@@ -52,14 +52,14 @@ console.log(`This is the result of your crazySum: ${sum}`);
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("-------- Exercise 3 --------");
 
-const crazyDiff = function (n1) {
+const crazyDiff = function (n) {
   let diff = 0;
-  switch (n1) {
-    case n1 > 19:
-      diff = Math.abs((n1 - 19) * 3);
+  switch (n) {
+    case n > 19:
+      diff = Math.abs((n - 19) * 3);
       return diff;
     default:
-      diff = Math.abs(n1 - 19);
+      diff = Math.abs(n - 19);
       return diff;
   }
 };
@@ -73,6 +73,21 @@ console.log(`This is the result of your crazyDiff: ${diff}`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("-------- Exercise 4 --------");
+
+const boundary = function (n) {
+  if ((n >= 20 && n <= 100) || n === 400) {
+    const bound = true;
+    return bound;
+  } else {
+    const bound = false;
+    return bound;
+  }
+};
+
+const bound = boundary(59);
+console.log(bound);
+console.log(`The boundary you're asking for is: ${bound}`);
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
