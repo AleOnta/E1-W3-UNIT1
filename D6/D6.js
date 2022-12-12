@@ -12,6 +12,15 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("-------- Exercise 1 --------");
+
+const area_calculator = function (l1, l2) {
+  const area = l1 * l2;
+  return area;
+};
+
+const area = area_calculator(5, 10);
+console.log(`This is the area of the rectangle in question: ${area}`);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -20,6 +29,7 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("-------- Exercise 2 --------");
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
