@@ -31,6 +31,19 @@ console.log(`This is the area of the rectangle in question: ${area}`);
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("-------- Exercise 2 --------");
 
+const crazySum = function (n1, n2) {
+  if (n1 === n2) {
+    const sum = (n1 + n2) * 3;
+    return sum;
+  } else {
+    const sum = n1 + n2;
+    return sum;
+  }
+};
+
+const sum = crazySum(4, 4);
+console.log(`This is the result of your crazySum: ${sum}`);
+
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
