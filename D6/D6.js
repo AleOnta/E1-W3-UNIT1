@@ -206,8 +206,35 @@ console.log(updatedString);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const cutString = function (sentence) {
+  if (typeof sentence === "string") {
+    const updatedSentence = sentence.slice(1, -1);
+    return updatedSentence;
+  } else {
+    console.log("The given value isn't a string, please insert a correct value");
+  }
+};
+
+const updatedSentence = cutString("idoes this function works?u");
+console.log(updatedSentence);
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const giveMeRandom = function (n) {
+  if (typeof n !== "number") {
+    console.log("The given value isn't a number, please insert a correct value");
+  } else {
+    let array = [];
+    for (let i = 0; i < n; i++) {
+      array.push(Math.floor(Math.random() * 10 + 1));
+    }
+    return array;
+  }
+};
+
+const randomArray = giveMeRandom(8);
+console.log(randomArray);
