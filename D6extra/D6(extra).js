@@ -7,6 +7,33 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("--------------------------------------- EX 1 ---------------------------------------");
+const giveMeRandom = function () {
+  const arrayRandom = [];
+  for (let i = 0; i < 20; i++) {
+    arrayRandom.push(Math.floor(Math.random() * 20));
+  }
+  return arrayRandom;
+};
+const arrayRandom = giveMeRandom();
+
+const checkArray = function () {
+  console.log(arrayRandom);
+  let higherThen5 = 0;
+  for (let i = 0; i < arrayRandom.length; i++) {
+    console.log(`${arrayRandom[i]} It's higher then 5? ${arrayRandom[i] > 5} `);
+    switch (arrayRandom[i]) {
+      case arrayRandom <= 5:
+        break;
+      default:
+        higherThen5 = higherThen5 + arrayRandom[i];
+        break;
+    }
+  }
+  console.log("The sum of all numbers that are higher than 5 is:", higherThen5);
+};
+
+checkArray();
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -14,60 +41,109 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("--------------------------------------- EX 2 ---------------------------------------");
 
+const shoppingCart = [];
+
+shoppingCart.push(
+  {
+    id: "tn888263",
+    name: "tastiera",
+    price: 80,
+    quantity: 2,
+  },
+  {
+    id: "tn888262",
+    name: "mouse",
+    price: 45,
+    quantity: 3,
+  },
+  {
+    id: "tn888261",
+    name: "monitor",
+    price: 140,
+    quantity: 1,
+  },
+  {
+    id: "tn888260",
+    name: "webcam",
+    price: 70,
+    quantity: 4,
+  },
+  {
+    id: "tn888259",
+    name: "tappetino",
+    price: 25,
+    quantity: 6,
+  }
+);
+
+const shoppingCartTotal = function () {
+  let amountToPay = 0;
+  let total = 0;
+  for (let i = 0; i < shoppingCart.length; i++) {
+    total = total + shoppingCart[i].price * shoppingCart[i].quantity;
+    amountToPay = amountToPay + total;
+    console.log("Relatively to the", shoppingCart[i].name, "the amount is:", total);
+  }
+  return amountToPay;
+};
+
+const amountToPay = shoppingCartTotal();
+console.log("The sum of all the amounts displayed is:", amountToPay);
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("--------------------------------------- EX 3 ---------------------------------------");
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("--------------------------------------- EX 4 ---------------------------------------");
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("--------------------------------------- EX 5 ---------------------------------------");
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("--------------------------------------- EX 6 ---------------------------------------");
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("--------------------------------------- EX 7 ---------------------------------------");
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("--------------------------------------- EX 8 ---------------------------------------");
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("--------------------------------------- EX 9 ---------------------------------------");
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+console.log("--------------------------------------- EX 10 ---------------------------------------");
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come paremetri due numeri interi, "x" e "y".
  Il risultato deve essere una matrice di "x" volte "y", e i valori devono rispecchiare gli indici della posizione all'interno della matrice.
@@ -77,3 +153,4 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log("--------------------------------------- EX 11 ---------------------------------------");
