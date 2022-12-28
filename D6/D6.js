@@ -98,45 +98,43 @@ console.log(bound);
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("-------- Exercise 5 --------");
 
-const epify = function (word) {
-  try {
-    let input = word.trimStart();
-    input = word.substr(0, 7);
-    if (input === "EPICODE") {
-      const sentence = word.trimStart();
-      return sentence;
-    } else {
-      const sentence = "EPICODE" + " " + input;
-      return sentence;
-    }
-  } catch (TypeError) {
-    console.log("The given value isn't a string, please insert a correct value");
-  }
-};
+// const epify = function (word) {
+//   try {
+//     let input = word.trimStart();
+//     input = word.substr(0, 7);
+//     if (input === "EPICODE") {
+//       const sentence = word.trimStart();
+//       return sentence;
+//     } else {
+//       const sentence = "EPICODE" + " " + input;
+//       return sentence;
+//     }
+//   } catch (TypeError) {
+//     console.log("The given value isn't a string, please insert a correct value");
+//   }
+// };
 
-const sentence = epify("EPICODE è il meglio");
-console.log(`The last version of the sentence is: ${sentence}`);
+// const sentence = epify("EPICODE è il meglio");
+// console.log(`The last version of the sentence is: ${sentence}`);
 
 // ALTERNATIVE OPTION WITHOUT USING TRY & CATCH
 
-/*
-const epify = function (word) {
+const epify2 = function (word) {
+  let regex = /^EPICODE/i;
+  const itExists = regex.test(word);
   if (typeof word === "string") {
-    let input = word.trimStart();
-    input = word.substr(0, 7);
-    if (input === "EPICODE") {
-      const sentence = word.trimStart();
-      return sentence;
+    if (itExists === true) {
+      return word;
     } else {
-      const sentence = "EPICODE" + " " + input;
-      return sentence;
+      return "EPICODE " + word;
     }
   } else {
-    console.log("The given value isn't a string, please insert a correct value");
-    stop;
+    console.log("The parameter given isn't a string, try again!.");
   }
 };
-*/
+
+const resultEx5 = epify2("EpIcOdE finalmente a Sanremo");
+console.log(resultEx5);
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -146,19 +144,35 @@ const epify = function (word) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("-------- Exercise 6 --------");
 
+// const check3and7 = function (n) {
+//   if (n % 3 === 0 || n % 7 === 0) {
+//     const result = true;
+//     return result;
+//   } else {
+//     const result = false;
+//     return result;
+//   }
+// };
+
+// const result = check3and7(10);
+// console.log(`Is the number a multiple of 3 or 7?: ${result}`);
+// console.log(result);
+
 const check3and7 = function (n) {
-  if (n % 3 === 0 || n % 7 === 0) {
-    const result = true;
-    return result;
-  } else {
-    const result = false;
-    return result;
+  if (n % 3 === 0 && n % 7 === 0) {
+    return "is multiple of both 3 & 7.";
+  } else if (n % 3 === 0 && n % 7 !== 0) {
+    return "is multiple of 3 but not of 7.";
+  } else if (n % 3 !== 0 && n % 7 === 0) {
+    return "isn't a multiple of 3 but a multiple of 7.";
+  } else if (n % 3 !== 0 && n % 7 !== 0) {
+    return "isn't a multile of 3 or 7.";
+  } else if (typeof n !== "number") {
+    return "the parameter given isn't a number.";
   }
 };
 
-const result = check3and7(10);
-console.log(`Is the number a multiple of 3 or 7?: ${result}`);
-console.log(result);
+console.log(check3and7(21));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
