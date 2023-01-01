@@ -121,9 +121,8 @@ console.log("-------- Exercise 5 --------");
 
 const epify2 = function (word) {
   let regex = /^EPICODE/i;
-  const itExists = regex.test(word);
   if (typeof word === "string") {
-    if (itExists === true) {
+    if (regex.test(word) === true) {
       return word;
     } else {
       return "EPICODE " + word;
@@ -133,7 +132,7 @@ const epify2 = function (word) {
   }
 };
 
-const resultEx5 = epify2("EpIcOdE finalmente a Sanremo");
+const resultEx5 = epify2("finalmente a Sanremo");
 console.log(resultEx5);
 
 /* ESERCIZIO 6
